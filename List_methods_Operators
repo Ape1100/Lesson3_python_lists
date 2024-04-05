@@ -1,0 +1,17 @@
+submitted = ["Alice", "Bob", "Charlie", "David"]
+attended = ["Charlie", "Eve", "Alice", "Frank"]
+
+# Task 1: Students who both submitted their assignments and attended the class
+both_submitted_and_attended = set(submitted) & set(attended)
+print("Students who both submitted their assignments and attended the class:", both_submitted_and_attended)
+
+# Task 2: Itentical List verification
+lists_identical = sorted(submitted) == sorted(attended)
+print("Are the two lists identical in terms of their content?", lists_identical)
+
+# Task 3: Remove students who did not submit their assignments
+for student in attended[:]:  
+    if student not in submitted:
+        attended.remove(student)
+
+print("Modified attended list after removing students who did not submit their assignment:", attended)

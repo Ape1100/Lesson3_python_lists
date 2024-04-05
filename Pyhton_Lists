@@ -1,0 +1,15 @@
+#Deep Dive into Python Lists 
+students = ["John", "Doe", "Jane", "Smith"]
+grades = [85, 90, 78, 88]
+activities = ["Football", "Music", "Art", "Dance"]
+
+# Task 1: Students who have grades below 80
+below_80_indices = [i for i, grade in enumerate(grades) if grade < 80]
+for index in below_80_indices:
+    print("Name:", students[index], ", Grade:", grades[index], ", Activity:", activities[index])
+
+# Task 2: New list named students_approved
+students_approved = [students[i] for i in range(len(students)) if i not in below_80_indices]
+
+# Task 3: Students_approved
+print("Students approved for the event:", students_approved)
